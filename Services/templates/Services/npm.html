@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+  <div class="npm-page">
+    <h4>نمایندگان, مراکز مرتبط و پزشکان همکار <img src="/static/images/green-plus.png" alt=""></h4>
+    <div class="row">
+      <div class="col Doctor-5">
+        <img height="auto" width="100%" src="/static/images/map.png" alt="">
+      </div>
+      <div class="col Doctor-7">
+        <h5>: درکجا فعال هستیم(نماینده های تخصصی ققنوس)</h5>
+        <p>توضیح کوتاه</p>
+        <p>در صورتیکه امکان همکاری با انجمن را در هر یک از شهر های دیگر دارید لطفا با ما تماس بگیرید</p>
+        <button id="first-button-npm" class="btn">راهنمای اخذ نمایندگی از انجمن ققنوس<img
+            src="/static/images/book-icon.png"></button>
+        <button id="second-button-npm" class="btn">درخواست نمایندگی<img
+            src="/static/images/white-plus.png"></button>
+      </div>
+    </div>
+    <section style="background-color: #f7f6e4; padding-bottom: 100px;">
+      <section id="first-section">
+        <div class="card-group">
+          <div class="card" id="Namayande" onclick="openNamayande()">
+            <div class="card-body text-center">
+              <h5>نمایندگان ققنوس در ایران</h5>
+            </div>
+          </div>
+          <div class="card" id="Marakez" onclick="openMarakez()">
+            <div class="card-body text-center">
+              <h5>مراکز مرتبط</h5>
+            </div>
+          </div>
+          <div class="card" id="Pezeshkan" onclick="openPezeshkan()">
+            <div class="card-body text-center">
+              <h5>پزشکان همراه</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="second-section">
+        <div id="namayande" class="npm">
+          {% for nam in namayande %}
+          <div class="row">
+            <div class="col">
+              <img src="{{ nam.image.url }}" alt="">
+              <div class="main-div-npm">
+                <div class="first-div-npm">
+                  <h4 style="background-color: #bdd62e;">{{nam.markaz}}</h4>
+                  <h5>{{nam.ostan}}</h5>
+                </div>
+                <div class="second-div-npm">
+                  <span class="first-span-div">شماره تماس:</span>
+                  <span class="second-span-div">تخصص :</span>
+                  <span class="third-span-div">آدرس:</span>
+                </div>
+                <div class="third-div-npm">
+                  <span class="first-span-div">{{nam.shomare}}</span>
+                  <span class="second-span-div">{{nam.masool}}</span>
+                  <span class="third-span-div">{{nam.address}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div id="marakez" class="npm">
+          {% for mar in marakez %}
+          <div class="row">
+            <div class="col">
+              <img src="{{ mar.image.url }}" alt="">
+              <div class="main-div-npm">
+                <div class="first-div-npm">
+                  <h4 style="background-color: #ffb129;">{{mar.markaz}}</h4>
+                  <h5>{{mar.ostan}}</h5>
+                </div>
+                <div class="second-div-npm">
+                  <span class="first-span-div">شماره تماس:</span>
+                  <span class="second-span-div">تخصص :</span>
+                  <span class="third-span-div">آدرس:</span>
+                </div>
+                <div class="third-div-npm">
+                  <span class="first-span-div">{{mar.shomare}}</span>
+                  <span class="second-span-div">{{mar.masool}}</span>
+                  <span class="third-span-div">{{mar.address}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div id="pezeshkan" class="npm">
+          {% for pez in pezeshkan %}
+          <div class="row">
+            <div class="col">
+              <img src="{{ pez.image.url }}" alt="">
+              <div class="main-div-npm">
+                <div class="first-div-npm">
+                  <h4 style="background-color: #6666FF;">{{pez.markaz}}</h4>
+                  <h5>{{pez.ostan}}</h5>
+                </div>
+                <div class="second-div-npm">
+                  <span class="first-span-div">شماره تماس:</span>
+                  <span class="second-span-div">تخصص :</span>
+                  <span class="third-span-div">آدرس:</span>
+                </div>
+                <div class="third-div-npm">
+                  <span class="first-span-div">{{pez.shomare}}</span>
+                  <span class="second-span-div">{{pez.takhasos}}</span>
+                  <span class="third-span-div">{{pez.address}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </section>
+  </div>
+</section>
+
+{% endblock content %}

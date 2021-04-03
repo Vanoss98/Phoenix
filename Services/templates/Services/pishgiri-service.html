@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if messages %}
+
+{% for message in messages %}
+<div {% if message.tags %} class="alert alert-success {{ message.tags }} text-center" role="alert" {% endif %}>
+    {{ message }}
+</div>
+{% endfor %}
+
+{% endif %}
+<div class="container-fluid pishgiri-whois pt-5">
+    <!--========== Pishgiri-Header ==========-->
+    <div class="row">
+        <div class="col-xl-5 pishgiri-right pb-4">
+            <h1><span><img src="/static/images/green-plus.png" class="pl-4" width="65px" alt=""></span>خدمات پیشگیری</h1>
+            <p>تهیه و تدوین منابع علمی برای محققین و سیاست گزاران</p>
+            <p class="pt-2">چاپ و توزیع کتاب های مفید برای سنین مختلف پیش دبستانی، دبستان، متوسطه اول و دوم و بزرگسالان</p>
+            <p class="pt-2">برگزاری کارگاه های آموزشی</p>
+            <p class="pt-2">ساخت کلیپ های آموزشی</p>
+        </div>
+        <div class="col-xl">
+            <video controls width="100%" src=""></video>
+        </div>
+    </div>
+    <!--========== Pishgiri-Contact ==========-->
+    <div class="container-fluid darman-service mt-5">
+        <h1><span><img src="/static/images/white-plus.png" class="pl-4" width="65px" alt=""></span>درخواست خدمات پیشگیری</h1>
+        <div class="row">
+            <div class="col-xl-5 service-contact-right">
+                <p>برای ارسال درخواست خدمات پیشگیری, از اطلاعات زیر یا فرم روبرو استفاده نمایید.</p>
+                <h4><span><img src="/static/images/wphone-icon.png" width="35px" alt=""></span> 0098 (21) <span>40 22 78
+                        70</span></h4>
+                <h5><span><img class="pr-2" src="/static/images/wmail-icon.png" width="40px" alt=""></span>
+                    services@ghoghnoosngo.com</h5>
+            </div>
+            <div class="col-xl text-center">
+                <form class="komite-form" method="POST" >
+                    {% csrf_token %}
+                    <p>{{ form.name }}</p>
+                    <p>{{ form.city }}</p>
+                    <p>{{ form.phone }}</p>
+                    <p>{{ form.email }}</p>
+                    <p>{{ form.text }}</p>
+                    <input style="background-color: white;" class="service-darman-button btn" type="submit" value="ارسال درخواست">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock %}

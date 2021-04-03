@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load custom_numerals %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="help-detail-back">
+    <div class="container-fluid">
+        <h1><span><img class="ml-5" src="/static/images/card-3-icon.png" width="30px" alt=""></span>چه کمکی نیاز دارید؟</h1>
+        <div class="container-fluid help-detail-main">
+            <div class="row">
+                <div class="col-lg help-detail-info">
+                    <p>انجمن مردم-نهاد, غیردولتی و غیرسیاسی حمایت از بیماران سوخته, با کمک نیروهای داوطلب و بدون منافع مالی, در جهت پیشگیری از سوختگی و نیز حمایت از بیماران سوخته فعالیت می کند...</p>
+                </div>
+                <div class="col-lg-7 help-detail-form text-center">
+                    <form method="POST ">
+                        {% csrf_token %}
+                        <p style="margin-bottom: 5px;">{{ form.name }}</p>
+                        <p style="margin-bottom: 5px;">{{ form.phone }}</p>
+                        <p style="margin-bottom: 5px;">{{ form.city }}</p>
+                        <p style="margin-bottom: 5px;">{{ form.email }}</p>
+                        <p style="margin-bottom: 5px;">{{ form.help }}<span><img style="float: left; margin-top: -30px; margin-left: 10px;" src="/static/images/menu-arrow-down.png" width="12px" alt=""></span></p>
+                        <p class="mb-3 mt-2">{{ form.text }}</p>
+                        <input class="btn help-detail-btn" type="submit" value="ارسال درخواست کمک">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock %}

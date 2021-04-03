@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="login-back">
+    <div class="card-group login-btn-main">
+        <a href="{% url 'login' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body patient-register-btn-1 text-center">
+                    <p class="card-text px-3">ورود اعضا </p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'register' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body  patient-register-btn-2 text-center">
+                    <p class="card-text">عضو ققنوس باشید</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'patient-register' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body patient-register-btn-3 text-center">
+                    <p class="card-text">ثبت نام بیماران</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="container-fluid login-main">
+        <div class="row">
+            <div class="col-lg-7 signup-detail-form text-center">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input class="textinput textInput form-control6" type="hidden" name="csrfmiddlewaretoken"
+                        value="U7b8uSDrR9L1K5U2dpMEvnOqjlHjSJevuoDm82ohEqzC1Pt9O4T3fPoYbR8kq3s1">
+                    <input class="textinput textInput form-control6" type="text" placeholder="نام کاربری (انگلیسی)" name="username" maxlength="150" autofocus="" required="" id="id_username">
+                    <input class="textinput textInput form-control6" placeholder="* کلمه رمز" type="password"
+                        name="password1" autocomplete="new-password" required="" id="id_password1">
+                    <input class="textinput textInput form-control6" placeholder="* تکرار کلمه رمز" type="password"
+                        name="password2" autocomplete="new-password" required="" id="id_password2">
+                    <input class="btn help-detail-btn mt-5" style="background-color: #6666ff;" type="submit" value="ثبت نام">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock content %}

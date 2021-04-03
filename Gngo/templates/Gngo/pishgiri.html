@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if messages %}
+
+{% for message in messages %}
+<div {% if message.tags %} class="alert alert-success {{ message.tags }} text-center" role="alert" {% endif %}>
+    {{ message }}
+</div>
+{% endfor %}
+
+{% endif %}
+<img class="about-header" src="/static/images/pishgiri-header.png" alt="">
+<div class="container-fluid pishgiri-whois">
+    <!--========== Pishgiri-Header ==========-->
+    <div class="row">
+        
+        <div class="col-xl-5 pishgiri-right pb-4">
+            <h1><span><img src="/static/images/orange-plus.png" class="pl-4" width="65px" alt=""></span>کمیته‌ی پیشگیری
+                انجمن ققنوس</h1>
+            <p>حل مشكل سوختگی از پیشگیری می‌گذرد. پیشگیری ساده‌تر، ارزان‌تر، موثرتر و ماندگارتر است. این كمیته با توصیه
+                و كمك به ایجاد الزامات قانونی، استانداردسازی و آموزش، تلاش می‌كند از وقوع حوادثی كه منجر به سوختگی
+                می‌شوند، پیشگیری کند.</p>
+        </div>
+        <div class="col-xl">
+            <fieldset class="pishgiri-inner-box" style="border: 4px solid #ffb129;">
+                <legend><span><img class="mx-3" src="/static/images/orange-plus.png" height="35px" alt=""></span>هدف
+                    کمیته پیشگیری</legend>
+                <p>هدف غایی و ایده‌آل كمیته پیشگیری از سوختگی، </p>
+                <p>رسیدن به زمانی است كه هیچ‌كس نسوزد.</p>
+                <p>این هدف بسیار دور و دست‌نیافتنی به نظر می‌رسد. به همین دلیل، </p>
+                <p>هدف عملیاتی این كمیته كاهش سالانه 10درصد از بروز سوختگی در كشور است.</p>
+            </fieldset>
+        </div>
+    </div>
+    <!--========== Pishgiri-info ==========-->
+    <div class="container-fluid about-service mt-5">
+        <h1><span><img src="/static/images/black-plus.png" class="pl-4" width="65px" alt=""></span>فعالیت‌های کمیته
+            پیشگیری</h1>
+        <div class="row pish-row text-center">
+            <div class="col-xl-4 pb-5">
+                <div class="card pishgiri-card-1 pishgiri-card-main" style="background-color: #ffb129;">
+                    <div class="card-body">
+                        <h4 class="card-text">الزامات قانونی</h4>
+                    </div>
+                    <div class="card-img-top text-right">
+                        <p>• مطالبه برای تدوین الزامات قانونی: انجمن با پیگیری از طریق تدوین آیین نامه یا تصویب قوانین,
+                            جامعه را ملزم به استانداردسازی می‌نماید.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 pb-5">
+                <div class="card pishgiri-card-2 pishgiri-card-main" style="background-color: #ffb129;">
+                    <div class="card-body">
+                        <h4 class="card-text">استانداردسازی</h4>
+                    </div>
+                    <div class="card-img-top text-right">
+                        <p>• مطالبه برای استانداردسازی: انجمن با اعتقاد به اینکه استانداردسازی موثرترین روش پیشگیری از
+                            سوختگی است, اصرار دارد که منازل, فضاهای عمومی, مدارس, دانشگاه‌ها, اتومبیل‌ها, وسایل گرمایشی
+                            و پخت و پز, خطوط انتقال نیرو باید استانداردهای لازم در پیشگیری از آتش سوزی و یا اطفای حریق
+                            به موقع را دارا باشد.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 pb-5">
+                <div class="card pishgiri-card-3 pishgiri-card-main" style="background-color: #ffb129;">
+                    <div class="card-body">
+                        <h4 class="card-text">آموزش عمومی</h4>
+                    </div>
+                    <div class="card-img-top text-right">
+                        <p class="pt-3">• تدوین روش های پیشگیری (تدوین و تولید اسناد آموزشی)</p>
+                        <p>• چاپ کتاب</p>
+                        <p>• تولید و نشر محتوای آموزشی از طریق رسانه‌های اجتماعی و عمومی</p>
+                        <p class="pb-1">• استفاده از تجارب سایر کشورها</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--========== Pishgiri-Contact ==========-->
+    <div class="container-fluid about-service mt-5">
+        <h1><span><img src="/static/images/black-plus.png" class="pl-4" width="65px" alt=""></span>تماس با کمیته پیشگیری
+        </h1>
+        <div class="row">
+            <div class="col-xl-5 pish-contact-right">
+                <p>برای تماس با مسئولان واحد پیشگیری انجمن ققنوس از اطلاعات زیر یا فرم روبرو استفاده نمایید.</p>
+                <h4><span><img src="/static/images/bphone-icon.png" width="35px" alt=""></span> 0098 (21) <span>40 22 78
+                        70</span></h4>
+                <h5><span><img class="pr-2" src="/static/images/bmail-icon.png" width="40px" alt=""></span>
+                    pishgiri@ghoghnoosngo.com</h5>
+            </div>
+            <div class="col-xl text-center">
+                <form class="komite-form" method="POST">
+                    {% csrf_token %}
+                    <p>{{ form.name }}</p>
+                    <p>{{ form.city }}</p>
+                    <p>{{ form.phone }}</p>
+                    <p>{{ form.email }}</p>
+                    <p>{{ form.text }}</p>
+                    <input style="background-color: #ffb129;" class="pishgiri-button btn" type="submit" value="ارسال پیام">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock %}

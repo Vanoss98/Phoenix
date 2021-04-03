@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for message in messages %}
+<div {% if message.tags %} class="alert alert-success {{ message.tags }} text-center" role="alert" {% endif %}>
+    {{ message }}
+</div>
+{% endfor %}
+
+<div class="container-fluid pishgiri-whois pt-5">
+    <!--========== Pishgiri-Header ==========-->
+    <div class="row">
+        
+        <div class="col-xl-5 pishgiri-right">
+            <h1><span><img src="/static/images/green-plus.png" class="pl-4" width="65px" alt=""></span>خدمات کاریابی و
+                کارآفرینی</h1>
+            <p>پیرو تفاهم نامه با موسسات رعد و سفیر عشق و برخی از خیرین, با معرفی نامه انجمن امکان حرفه آموزی میسر
+                می‌شود. </p>
+        </div>
+        <div class="col-xl">
+            <fieldset class="about-inner-box ">
+                <legend><span><img class="mx-3" src="/static/images/green-plus.png" height="35px" alt=""></span>چشم
+                    انداز ققنوس</legend>
+                <p>کاریابی و کارآفرینی برای افراد سوخته</p>
+                <p>ایفای نقش موثر برای رسیدن به جامعه ای که در آن</p>
+                <p> <span>احتمال سوختن</span> افراد,<span>نزدیک به صفر</span> باشد;</p>
+                <div class="text-center ">
+                    <a href="#hire-form1" class="btn apply-job-btn mt-3 mb-3"> ثبت درخواست کار <span><img
+                                src="/static/images/white-left-icon.png" alt=""></span></a>
+                    <a href="#hire-form2" class="btn hire-job-btn mt-3 mb-3">ثبت آگهی استخدام <span><img
+                                src="/static/images/white-left-icon.png" alt=""></span></a>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<section>
+    <div class="container-fluid hire-job-form-header">
+        <div class="row">
+            <div class="col-lg hire-job-info">
+                <h1><span><img src="/static/images/black-plus.png" class="pl-4" width="65px" alt=""></span>ثبت درخواست
+                </h1>
+                <p>برای ارسال درخواست خدمات کاریابی و کارآفرینی, از اطلاعات زیر یا فرم روبرو استفاده نمایید. برای ارسال
+                    درخواست خدمات کاریابی و کارآفرینی, از اطلاعات زیر یا فرم روبرو استفاده نمایید.برای ارسال درخواست
+                    خدمات کاریابی و کارآفرینی, از اطلاعات زیر یا فرم روبرو استفاده نمایید.برای ارسال درخواست خدمات
+                    کاریابی و کارآفرینی, از اطلاعات زیر یا فرم روبرو استفاده نمایید.</p>
+            </div>
+            <div class="col-lg hire-job-contact">
+                <p>برای ثبت درخواست کار یا استخدام, از اطلاعات یا فرم های زیر استفاده نمایید.</p>
+                <h4 class="pb-3"><span><img src="/static/images/bphone-icon.png" width="34px" alt=""></span> 0098 (21)
+                    <span>40 22 78
+                        70</span></h4>
+                <h5 class="pb-5"><span><img class="pr-2" src="/static/images/bmail-icon.png" width="40px" alt=""></span>
+                    services@ghoghnoosngo.com</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-fluid hire-job-form-header pb-5">
+        <div class="row pb-5">
+            <div id="hire-form1" class="col-lg hire-job-form1 mb-5">
+                <h1>استخدام شوید</h1>
+                <h3><span><img src="/static/images/white-plus.png" class="pl-4" width="65px" alt=""></span>ثبت درخواست
+                    کار</h3>
+                <form  class="hire-form1 text-center" action="" method="post">
+                    {% csrf_token %}
+                    <p>{{ aform.name }}</p>
+                    <ul id="id_gender" class="form-check-inline karyabi-radio-main">
+                        <li>
+                            <label style="margin-left: 25px;color:white !important;" class="form-check-label register-radio"
+                                for="id_gender_1"><input style="margin-left: 7px; " type="radio" name="gender"
+                                    class="form-check-input" value="1" required="" id="id_gender_1">زن</label>
+                        </li>
+                        <li>
+                            <label class="form-check-label" style="color:white !important;" for="id_gender_0"><input class="form-check-input"
+                                    type="radio" name="gender" value="0" style="margin-left: 7px;" required=""
+                                    id="id_gender_0">مرد</label>
+                        </li>
+                    </ul>
+                    <p>{{ aform.city }}</p>
+                    <p>{{ aform.phone }}</p>
+                    <p>{{ aform.email }}</p>
+                    <p>{{ aform.maharat }}</p>
+                    <p>{{ aform.percentage }}</p>
+                    <p>{{ aform.area }}</p>
+                    <p>{{ aform.saatKari }}</p>
+                    <input type="submit" name="{{aform.prefix}}" class="btn" value="ارسال درخواست کار" />
+                </form>
+            </div>
+            <div id="hire-form2" class="col-lg hire-job-form2 mb-5">
+                <h1>استخدام کنید</h1>
+                <h3><span><img src="/static/images/white-plus.png" class="pl-4" width="65px" alt=""></span>ثبت آگهی
+                    استخدام</h3>
+                <form  class="hire-form2 text-center" method="post">
+                    {% csrf_token %}
+                    <p>{{ bform.name }}</p>
+                    <p>{{ bform.city }}</p>
+                    <p>{{ bform.phone }}</p>
+                    <p>{{ bform.email }}</p>
+                    <p>{{ bform.maharat }}</p>
+                    <p>{{ bform.companyName }}</p>
+                    <p>{{ bform.address }}</p>
+                    <p>{{ bform.saatKari }}</p>
+                    <ul id="id_gender" class="form-check-inline karyabi-radio-main">
+                        <li style="color:white; font-size: 14px; margin-left: 10%;">درخواست برای نیروی کار: </li>
+                        <li>
+                            <label style="margin-left: 25px;color:white !important;" class="form-check-label register-radio"
+                                for="id_gender_1"><input style="margin-left: 7px; " type="radio" name="gender"
+                                    class="form-check-input" value="1" required="" id="id_gender_1">زن</label>
+                        </li>
+                        <li>
+                            <label class="form-check-label" style="color:white !important;" for="id_gender_0"><input class="form-check-input"
+                                    type="radio" name="gender" value="0" style="margin-left: 7px;" required=""
+                                    id="id_gender_0">مرد</label>
+                        </li>
+                    </ul>
+                    <input type="submit" name="{{bform.prefix}}" class="btn" value="ارسال آگهی استخدام" />
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+
+
+
+
+
+{% endblock content %}

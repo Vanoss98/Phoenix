@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid medic-main">
+    <div class="row mt-5">
+        <div class="col-xl-7 pishgiri-right">
+            <h1 class="medic-h1"><span><img src="/static/images/red-plus.png" class="pl-4" width="65px"
+                        alt=""></span>امداد سوختگی - موقع سوختگی چه کنیم؟</h1>
+        </div>
+        <div class="col-xl-5 mb-4">
+            <div class=" medic-btn text-center pt-3" style="padding-bottom: 1px;">
+                <p>راهنمایی و امداد سوختگی ققنوس</p>
+                <p> ۰۲۱ - ۴۰ ۲۲ ۷۸ ۷۰</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="medic-card1" onclick="openPot()" class="mb-4 pb-5 col-lg">
+            <div id="card-4-border"></div>
+            <div class="text-center">
+                <img id="red-pot" src="/static/images/white-pot.png" width="75px" alt="">
+                <p class="card-text">سوختگی با مایعات داغ</p>
+                <span id="red-span">(کمتر از ده درصد سطح بدن)</span>
+            </div>
+        </div>
+        <div id="medic-card2" onclick="openPot1()" class="mb-4 pb-5 col-lg">
+            <div id="card-5-border"></div>
+            <div class="text-center">
+                <img id="red-pot1" src="/static/images/white-pot.png" width="75px" alt="">
+                <p class="card-text">سوختگی با مایعات داغ</p>
+                <span id="red-span1">(بیشتر از ده درصد سطح بدن)</span>
+            </div>
+        </div>
+        <div id="medic-card3" onclick="openLightning()" class="pb-5 mb-4 col-lg">
+            <div id="card-6-border"></div>
+            <div class="text-center">
+                <img id="red-lightning" src="/static/images/white-lightning.png" width="50px" alt="">
+                <p class="card-text">سوختگی</p>
+                <span id="red-span2">الکتریکی</span>
+            </div>
+        </div>
+        <div id="medic-card4" onclick="openFlame()" class=" pb-5 mb-4 col-lg">
+            <div id="card-7-border"></div>
+            <div class="text-center">
+                <img id="red-flame" src="/static/images/white-flame.png" width="55px" alt="">
+                <p class="card-text">سوختگی با شعله</p>
+                <span id="red-span3">(کمتر از ده درصد سطح بدن)</span>
+            </div>
+        </div>
+        <div id="medic-card5" onclick="openFlame1()" class=" pb-5 mb-4 col-lg">
+            <div id="card-8-border"></div>
+            <div class="text-center">
+                <img id="red-flame1" src="/static/images/white-flame.png" width="55px" alt="">
+                <p class="card-text">سوختگی با شعله</p>
+                <span id="red-span4">(بیشتر از ده درصد سطح بدن)</span>
+            </div>
+        </div>
+        <div id="medic-card6" onclick="openBottle()" class=" pb-5 mb-4 col-lg">
+            <div id="card-9-border"></div>
+            <div class="text-center">
+                <img id="red-bottle" src="/static/images/white-bottle.png" width="85px" alt="">
+                <p class="card-text">سوختگی</p>
+                <span id="red-span5">شیمیایی</span>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="row medic-overlay" id="medic-overlay">
+            <div class="col-lg-7">
+                <video src="" controls width="100%"></video>
+            </div>
+            <div class="col-lg-5">
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/1.png" width="31px" alt=""></span>خنک کردن
+                    زخم به مدت
+                    بیست دقیقه
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/2.png" width="31px" alt=""></span>خارج
+                    کردن لباس و زیور
+                    آلات
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/3.png" width="31px" alt=""></span>پوشش زخم
+                    با پانسمان
+                    ساده یا پارچه تمیز
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/4.png" width="31px" alt=""></span>انتقال
+                    بیمار به
+                    درمانگاه محلی یا بیمارستان یا تماس با ۱۱۵
+                </div>
+            </div>
+        </div>
+        <div class="row medic-overlay" id="medic-overlay1">
+            <div class="col-lg-7">
+                <video src="" controls width="100%"></video>
+            </div>
+            <div class="col-lg-5">
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/1.png" width="31px" alt=""></span>خارج
+                    کردن لباس و زیور آلات
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/2.png" width="31px" alt=""></span>پوشش زخم
+                    با پانسمان ساده یا ملحفه تمیز
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/3.png" width="31px" alt=""></span>انتقال
+                    بیمار به بیمارستان یا تماس با ۱۱۵
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/4.png" width="31px" alt=""></span>در صورت
+                    امکان کنترل درد و اضطراب با مسکن
+                </div>
+            </div>
+        </div>
+        <div class="row medic-overlay" id="medic-overlay2">
+            <div class="col-lg-7">
+                <video src="" controls width="100%"></video>
+            </div>
+            <div class="col-lg-5">
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/1.png" width="31px" alt=""></span>جدا کردن
+                    فرد مصدوم از منبع برق با چوپ ، پلاستیک یا سایر موارد عایق
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/2.png" width="31px" alt=""></span>بررسی
+                    علائم حیاتی بیمار و راه هوایی
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/3.png" width="31px" alt=""></span>دقت به
+                    سقوط یا پرتاب شدن بیمار و ایجاد صدمات همراه
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/4.png" width="31px" alt=""></span>خارج
+                    کردن لباس و زیورآلات
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/5.png" width="31px" alt=""></span>انتقال
+                    به بیمارستان
+                </div>
+            </div>
+        </div>
+        <div class="row medic-overlay" id="medic-overlay3">
+            <div class="col-lg-7">
+                <video src="" controls width="100%"></video>
+            </div>
+            <div class="col-lg-5">
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/1.png" width="31px" alt=""></span>خاموش
+                    کردن شعله و خارج کردن فرد از محل آتش سوزی
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/2.png" width="31px" alt=""></span>خنک کردن
+                    زخم با آب معمولی به مدت بیست دقیقه
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/3.png" width="31px" alt=""></span>خارج
+                    کردن لباس ( در صورتی که به بدن نچسبیده باشد) و خارج کردن زیور آلات
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/4.png" width="31px" alt=""></span>پوشش زخم
+                    با پانسمان ساده یا پارچه تمیز
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/5.png" width="31px" alt=""></span>مراجعه
+                    به درمانگاه محلی یا بیمارستان
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/6.png" width="31px" alt=""></span>درصورت
+                    امکان کنترل درد و اضطراب با مسکن
+                </div>
+            </div>
+        </div>
+        <div class="row medic-overlay" id="medic-overlay4">
+            <div class="col-lg-7">
+                <video src="" controls width="100%"></video>
+            </div>
+            <div class="col-lg-5">
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/1.png" width="31px" alt=""></span>خاموش
+                    کردن شعله ، خارج کردن فرد از محل آتش سوزی
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/2.png" width="31px" alt=""></span>در آوردن
+                    لباس ( در صورتی که به بدن نچسبیده باشد) و خارج کردن زیورآلات
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/3.png" width="31px" alt=""></span>دقت به
+                    صدمات همراه ناشی از سقوط یا پرت شدن
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/4.png" width="31px" alt=""></span>پوشاندن
+                    زخم با یک پانسمان ساده یا ملحفه تمیز
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/5.png" width="31px" alt=""></span>انتقال
+                    بیمار به بیمارستان یا تماس با ۱۱۵
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/6.png" width="31px" alt=""></span>در صورت
+                    امکان مراقبت تنفسی و کنترل درد
+                </div>
+            </div>
+        </div>
+        <div class="row medic-overlay" id="medic-overlay5">
+            <div class="col-lg-7">
+                <video src="" controls width="100%"></video>
+            </div>
+            <div class="col-lg-5">
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/1.png" width="31px" alt=""></span>خارج
+                    کردن لباس آلوده به مواد شیمیایی
+
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/2.png" width="31px" alt=""></span>تمیز
+                    کردن بیمار از مواد شیمیایی
+
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/3.png" width="31px" alt=""></span>مواد
+                    شیمیایی خشک با برس برداشته شود
+
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/4.png" width="31px" alt=""></span>شست و شو
+                    با آب فراوان به مدت یک ساعت و بیشتر
+
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/5.png" width="31px" alt=""></span>پوشش زخم
+                    با پانسمان ساده یا ملحفه تمیز
+
+                </div>
+                <div class="pb-4"><span><img class="ml-3" src="/static/images/6.png" width="31px" alt=""></span>تماس با
+                    ۱۱۵ یا انتقال بیمار به بیمارستان و
+                    در صورت امکان کنترل درد و اضطراب
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mb-5">
+        <div class="col-xl-7 pishgiri-right mt-4">
+            <h1 class="medic-h1"><span><img src="/static/images/red-plus.png" class="pl-4" width="65px"
+                        alt=""></span>نکات عمومی در مورد همه‌ی انواع سوختگی</h1>
+        </div>
+        <div class="row medic-overlay">
+            <div class="col-lg">
+                <div class="pb-2"><span><img class="ml-3" src="/static/images/1.png" width="31px" alt=""></span>سوختن را
+                    متوقف کنید</div>
+                <p>* آتش را خاموش کنید یا تماس شخص با جسم داغ یا سایر مواد داغ را متوقف کنید.</p>
+                <p>* به فرد کمک کنید، نباید بدود، باید بخوابد و غلت بزند .</p>
+                <p>*مواد ذوب شده یا داغ را به آرامی از بدن فرد جدا کنید.
+                </p>
+                <p>* لباسهای فرد را خارج کنید، اگر قسمتی از لباس به بدن چسبیده است، اطراف آن را قیچی کنید ، اما آن را
+                    نکنید.
+                </p>
+                <div class="pb-2"><span><img class="ml-3" src="/static/images/2.png" width="31px" alt=""></span>تمام چیز
+                    هایی که دور اندام ها یا بدن است مانند زیور آلات ، کمربند و لباسهای تنگ را خارج کنید چون محل سوخته و
+                    بدنبال آن تمام بدن ورم می کند
+                </div>
+                <div class="pb-2"><span><img class="ml-3" src="/static/images/3.png" width="31px" alt=""></span>محل
+                    سوخته را سرد کنید
+                </div>
+                <p>تمام قسمت سوخته را زیر آب سرد شیر بگیرید و تا برطرف شدن درد ادامه دهید. اگر آب وجود ندارد از کمپرس
+                    سرد استفاده کنید ولی از یخ استفاده نکنید .
+                </p>
+            </div>
+            <div class="col-lg">
+                <div class="pb-2"><span><img class="ml-3" src="/static/images/4.png" width="31px" alt=""></span>از زخم
+                    سوخته محافظت کنید
+                </div>
+                <p>زخم را با گاز استریل یا با پارچه و ملحفه تمیز بپوشانید.
+                    از کره، سیب زمینی، خمیر دندان، آرد و سایر مواد استفاده نکنید زیرا خطر عفونت زخم وجود دارد.</p>
+                <div class="pb-2"><span><img class="ml-3" src="/static/images/5.png" width="31px" alt=""></span>درد را
+                    با مسکن های خوراکی درمان کنید
+                </div>
+                <p>استامینوفن و بروفن مناسب کاهش درد هستند .
+                </p>
+                <div class="pb-2"><span><img class="ml-3" src="/static/images/6.png" width="31px" alt=""></span>به پزشک
+                    یا بیمارستان مراجعه نمایید
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    function openPot() {
+        closePot1();
+        closeLightning();
+        closeFlame();
+        closeFlame1();
+        closeBottle();
+        document.getElementById("medic-overlay").style.display = "block"
+        document.getElementById("medic-card1").style.background = "#e6e6e6";
+        document.getElementById("medic-card1").style.color = "black";
+        document.getElementById("card-4-border").style.display = "block";
+        document.getElementById("medic-card1").style.marginLeft = "0px";
+        document.getElementById("red-pot").src = "/static/images/red-pot.png";
+        document.getElementById("red-span").style.color = "black";
+    }
+
+    function closePot() {
+        document.getElementById("medic-overlay").style.display = "none"
+        document.getElementById("medic-card1").style.background = "#333333";
+        document.getElementById("medic-card1").style.color = "white";
+        document.getElementById("card-4-border").style.display = "none";
+        document.getElementById("medic-card1").style.marginLeft = "5px";
+        document.getElementById("red-pot").src = "/static/images/white-pot.png";
+        document.getElementById("red-span").style.color = "white";
+    }
+
+    function openPot1() {
+        closePot();
+        closeLightning();
+        closeFlame();
+        closeFlame1();
+        closeBottle();
+        document.getElementById("medic-overlay1").style.display = "block"
+        document.getElementById("medic-card2").style.background = "#e6e6e6";
+        document.getElementById("medic-card2").style.color = "black";
+        document.getElementById("card-5-border").style.display = "block";
+        document.getElementById("medic-card2").style.marginLeft = "0px";
+        document.getElementById("red-pot1").src = "/static/images/red-pot.png";
+        document.getElementById("red-span1").style.color = "black";
+    }
+
+    function closePot1() {
+        document.getElementById("medic-overlay1").style.display = "none"
+        document.getElementById("medic-card2").style.background = "#333333";
+        document.getElementById("medic-card2").style.color = "white";
+        document.getElementById("card-5-border").style.display = "none";
+        document.getElementById("medic-card2").style.marginLeft = "5px";
+        document.getElementById("red-pot1").src = "/static/images/white-pot.png";
+        document.getElementById("red-span1").style.color = "white";
+    }
+
+    function openLightning() {
+        closePot();
+        closePot1();
+        closeFlame();
+        closeFlame1();
+        closeBottle();
+        document.getElementById("medic-overlay2").style.display = "block"
+        document.getElementById("medic-card3").style.background = "#e6e6e6";
+        document.getElementById("medic-card3").style.color = "black";
+        document.getElementById("card-6-border").style.display = "block";
+        document.getElementById("medic-card3").style.marginLeft = "0px";
+        document.getElementById("red-lightning").src = "/static/images/red-lightning.png";
+        document.getElementById("red-span2").style.color = "black";
+    }
+
+    function closeLightning() {
+        document.getElementById("medic-overlay2").style.display = "none"
+        document.getElementById("medic-card3").style.background = "#333333";
+        document.getElementById("medic-card3").style.color = "white";
+        document.getElementById("card-6-border").style.display = "none";
+        document.getElementById("medic-card3").style.marginLeft = "5px";
+        document.getElementById("red-lightning").src = "/static/images/white-lightning.png";
+        document.getElementById("red-span2").style.color = "white";
+    }
+
+    function openFlame() {
+        closePot();
+        closePot1();
+        closeFlame1();
+        closeLightning();
+        closeBottle();
+        document.getElementById("medic-overlay3").style.display = "block"
+        document.getElementById("medic-card4").style.background = "#e6e6e6";
+        document.getElementById("medic-card4").style.color = "black";
+        document.getElementById("card-7-border").style.display = "block";
+        document.getElementById("medic-card4").style.marginLeft = "0px";
+        document.getElementById("red-flame").src = "/static/images/red-flame.png";
+        document.getElementById("red-span3").style.color = "black";
+    }
+
+    function closeFlame() {
+        document.getElementById("medic-overlay3").style.display = "none"
+        document.getElementById("medic-card4").style.background = "#333333";
+        document.getElementById("medic-card4").style.color = "white";
+        document.getElementById("card-7-border").style.display = "none";
+        document.getElementById("medic-card4").style.marginLeft = "5px";
+        document.getElementById("red-flame").src = "/static/images/white-flame.png";
+        document.getElementById("red-span3").style.color = "white";
+    }
+
+    function openFlame1() {
+        closePot();
+        closePot1();
+        closeFlame();
+        closeLightning();
+        closeBottle();
+        document.getElementById("medic-overlay4").style.display = "block"
+        document.getElementById("medic-card5").style.background = "#e6e6e6";
+        document.getElementById("medic-card5").style.color = "black";
+        document.getElementById("card-8-border").style.display = "block";
+        document.getElementById("medic-card5").style.marginLeft = "0px";
+        document.getElementById("red-flame1").src = "/static/images/red-flame.png";
+        document.getElementById("red-span4").style.color = "black";
+    }
+
+    function closeFlame1() {
+        document.getElementById("medic-overlay4").style.display = "none"
+        document.getElementById("medic-card5").style.background = "#333333";
+        document.getElementById("medic-card5").style.color = "white";
+        document.getElementById("card-8-border").style.display = "none";
+        document.getElementById("medic-card5").style.marginLeft = "5px";
+        document.getElementById("red-flame1").src = "/static/images/white-flame.png";
+        document.getElementById("red-span4").style.color = "white";
+    }
+
+    function openBottle() {
+        closePot();
+        closePot1();
+        closeFlame();
+        closeLightning();
+        closeFlame1();
+        document.getElementById("medic-overlay5").style.display = "block"
+        document.getElementById("medic-card6").style.background = "#e6e6e6";
+        document.getElementById("medic-card6").style.color = "black";
+        document.getElementById("card-9-border").style.display = "block";
+        document.getElementById("medic-card6").style.marginLeft = "0px";
+        document.getElementById("red-bottle").src = "/static/images/red-bottle.png";
+        document.getElementById("red-span5").style.color = "black";
+    }
+
+    function closeBottle() {
+        document.getElementById("medic-overlay5").style.display = "none"
+        document.getElementById("medic-card6").style.background = "#333333";
+        document.getElementById("medic-card6").style.color = "white";
+        document.getElementById("card-9-border").style.display = "none";
+        document.getElementById("medic-card6").style.marginLeft = "5px";
+        document.getElementById("red-bottle").src = "/static/images/white-bottle.png";
+        document.getElementById("red-span5").style.color = "white";
+    }
+
+</script>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+
+{% endblock %}

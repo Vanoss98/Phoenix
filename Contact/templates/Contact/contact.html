@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load custom_numerals %}
+{% block content %}
+
+{% for message in messages %}
+<div {% if message.tags %} class="alert alert-success {{ message.tags }} text-center" role="alert" {% endif %}>
+    {{ message }}
+</div>
+{% endfor %}
+
+<div class="container-fluid contact-main">
+    <div class="row">
+        <div class="col-lg-4 contact-info">
+            <h1><span><img src="/static/images/white-plus.png" class="pl-4" width="65px" alt=""></span>تماس با انجمن
+                ققنوس</h1>
+            <p style="line-height: 25px;" class="pb-3">برای کمک به افراد سوخته, دریافت کمک برای سوختگی, حمایت از انجمن
+                وسوالات و نظرات خود, با ما تماس بگیرید.
+            </p>
+            <h5 style="font-size: 27px;"><span><img class="pr-2" src="/static/images/bphone-icon.png" width="40px"
+                        alt=""></span>
+                ۰۲۱ ۴۰ ۲۲ ۷۸ ۷۰</h5>
+            <h5 style="font-size: 27px;"><span><img class="pr-2" src="/static/images/wa-icon.png" width="40px"
+                        alt=""></span>
+                ۰۹۲۰ ۹۵ ۱۲ ۹۷۹</h5>
+            <h5 style="font-size: 22px;"><span><img class="pr-2" src="/static/images/bmail-icon.png" width="40px"
+                        alt=""></span>
+                life@ghoghnoosngo.com</h5>
+            <h5 style="font-size: 22px;"><span><img class="pr-2" src="/static/images/insta-icon.png" width="40px"
+                        alt=""></span>
+                @ghoghnoosngo</h5>
+            <h5 style="font-size: 22px;"><span><img class="pr-2" src="/static/images/linked-icon.png" width="40px"
+                        alt=""></span>
+                /ghoghnoosngo</h5>
+            <p class="pt-4">آدرس دفتر مرکزی:</p>
+            <p>تهران, میدان هروی, خیابان وفامنش ,نبش</p>
+            <p> خیابان ازادی, مجتمع تجاری ایلیا, زنگ ۲۸, طبقه ۶</p>
+            <p class="pb-4">دفتر مرکزی انجمن ققنوس</p>
+        </div>
+        <div class="col-lg-5 my-5 text-center contact-form"
+            style="padding-right: 6% !important; padding-left: 6% !important;">
+            <form method="POST">
+                {% csrf_token %}
+                <p style="margin-bottom: 5px;">{{ form.name }}</p>
+                <p style="margin-bottom: 5px;">{{ form.city }}</p>
+                <p style="margin-bottom: 5px;">{{ form.phone }}</p>
+                <p style="margin-bottom: 5px;">{{ form.email }}</p>
+                <p class="my-4">{{ form.text }}</p>
+                <input style="background-color: #bdd62e; width: 100%; margin-bottom: 45px;"
+                    class="service-darman-button btn" type="submit" value="ارسال پیام">
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid contact-map">
+        <iframe class="mb-5"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1618.6174805146402!2d51.477177583560454!3d35.76960429752171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e048601c82aa9%3A0xce2c5664dc804df8!2sTehran%20Province%2C%20Tehran%2C%20Azadi%20Dr%2C%20Iran!5e0!3m2!1sen!2s!4v1613313258046!5m2!1sen!2s"
+        width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+    </div>
+        
+</div>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+
+{% endblock %}

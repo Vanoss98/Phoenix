@@ -1,0 +1,603 @@
+{% extends 'base.html' %}
+{% load custom_numerals %}
+{% block content %}
+
+<body id="body" data-spy="scroll" data-target=".header">
+
+    <!--========== HEADER ==========-->
+
+    <!--========== END HEADER ==========-->
+
+    <!--========== SLIDER ==========-->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active main-slider-img" style="background-image: url('/static/images/home-slider1.jpg')">
+                <!-- <div class="carousel-caption d-none d-md-block">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button class="btn main-slider-button-1"><span><img class="ml-2"
+                                        src="static/images/white-plus.png" width="30px"></span>من هم هستم</button>
+                            <button class="btn main-slider-button-2">بیشتر بدانید ... </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="carousel-item main-slider-img" style="background-image: url('/static/images/home-slider3.jpg')">
+                <!-- <div class="carousel-caption d-none d-md-block">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button class="btn main-slider-button-1"><span><img class="ml-2"
+                                        src="static/images/white-plus.png" width="30px"></span>من هم هستم</button>
+                            <button class="btn main-slider-button-2">بیشتر بدانید ... </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="carousel-item main-slider-img" style="background-image: url('/static/images/home-slider4.jpg')">
+                <!-- <div class="carousel-caption d-none d-md-block">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button class="btn main-slider-button-1"><span><img class="ml-2"
+                                        src="static/images/white-plus.png" width="30px"></span>من هم هستم</button>
+                            <button class="btn main-slider-button-2">بیشتر بدانید ... </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="carousel-item main-slider-img" style="background-image: url('/static/images/home-slider2.jpg')">
+                <!-- <div class="carousel-caption d-none d-md-block">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button class="btn main-slider-button-1"><span><img class="ml-2"
+                                        src="static/images/white-plus.png" width="30px"></span>من هم هستم</button>
+                            <button class="btn main-slider-button-2">بیشتر بدانید ... </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="carousel-item main-slider-img" style="background-image: url('/static/images/home-slider5.jpg')">
+                <!-- <div class="carousel-caption d-none d-md-block">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <button class="btn main-slider-button-1"><span><img class="ml-2"
+                                        src="static/images/white-plus.png" width="30px"></span>من هم هستم</button>
+                            <button class="btn main-slider-button-2">بیشتر بدانید ... </button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+        <section id="section10" class="demo">
+            <a href="#thanks"><span></span></a>
+        </section>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icons" aria-hidden="true"><img width="20px"
+                    src="static/images/main-slider-prev-arrow.png" alt=""></span>
+
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icons" aria-hidden="true"><img width="20px"
+                    src="static/images/main-slider-next-arrow.png" alt=""></span>
+
+        </a>
+    </div>
+
+    <!--========== 5 CARDS ==========-->
+    <div id="thanks" class="container-fluid">
+        <div class="row">
+            <div class="col-xl card-even">
+                <a href="{% url 'About-page' %}">
+                    <img src="static/images/card-1-icon.png" alt="">
+                    <h3>ققنوس</h3>
+                    <h3 class="pb-5">کیست؟</h3>
+                    <p>انجمن حمایت از بیماران سوخته</p>
+                    <p>کیست و چه می کند؟</p>
+                    <p class="card-last-p">چرا ققنوس؟</p>
+                    <div class="card-1-border"></div>
+                </a>  
+            </div>
+            <div class="col-xl card-odd">
+                <a href="https://zarinp.al/ghoghnoosngo.com">
+                    <img src="static/images/card-2-icon.png" alt="">
+                    <h3>کمک به</h3>
+                    <h3 class="pb-5">ققنوس</h3>
+                    <p>به درمان, بازتوانی و حمایت از بیماران سوخته, </p>
+                    <p>و نیز به جریان پیشگیری از سوختگی</p>
+                    <p class="card-last-p">کمک کنید ...</p>
+                    <div class="card-2-border"></div>
+                </a> 
+            </div>
+            <div class="col-xl card-even">
+                <a href="{% url 'Help-page' %}">
+                    <img src="static/images/card-3-icon.png" alt="">
+                    <h3>چه کمکی</h3>
+                    <h3 class="pb-5">نیاز دارید؟</h3>
+                    <p>از انجمن ققنوس برای</p>
+                    <p>مشاوره, درمان و بازتوانی افراد سوخته</p>
+                    <p class="card-last-p">کمک بگیرید ...</p>
+                    <div class="card-3-border"></div>
+                </a> 
+            </div>
+            <div class="col-xl card-odd">
+                <a href="{% url 'Medic-page' %}">
+                    <img src="static/images/card-4-icon.png" alt="">
+                    <h3>هنگام سوختگی</h3>
+                    <h3 class="pb-5">چه کنیم؟</h3>
+                    <p>یاد بگیرید که چگونه</p>
+                    <p>کمک به جا, به هنگام و درست شما, </p>
+                    <p class="card-last-p">می تواند جان و زندگی دیگران را نجات دهد ...</p>
+                    <div class="card-4-border"></div>
+                </a>
+            </div>
+            <div class="col-xl card-even">
+                <a href="{% url 'Questions-page' %}">
+                    <img src="static/images/card-5-icon.png" alt="">
+                    <h3>چطور</h3>
+                    <h3 class="pb-5">نسوزیم؟</h3>
+                    <p>این راه های بسیار ساده</p>
+                    <p>برای پیشگیری از سوختگی را یاد بگیرید</p>
+                    <p class="card-last-p">و به دیگران هم معرفی کنید ...</p>
+                    <div class="card-5-border"></div>
+                </a> 
+            </div>
+        </div>
+    </div>
+    <!--========== Part 3 ==========-->
+    <div class="container-fluid part-3-background text-center"
+        style="background-image: url('/static/images/part-3-background.jpg')">
+        <div class="row">
+            <div class="col-lg">
+                <a href=""><button class="btn part-3-btn-1"> دانلود کتابچه ققنوس <span><img class="pr-5 mr-5"
+                                src="static/images/download-icon-white.png" height="30px" alt=""></span></button></a>
+                <br>
+                <a href="{% url 'About-page' %}"><button class="btn part-3-btn-2">درباره ققنوس بیشتر بدانید <span><img
+                                class="pr-4 mr-4" src="static/images/white-plus.png" height="30px"
+                                alt=""></span></button></a>
+                <br>
+                <a href=""><button class="btn part-3-btn-3">سفیر و حامی شوید <span><img
+                                class="pr-5 mr-5" src="static/images/white-hand-icon.png" height="45px"
+                                alt=""></span></button></a>
+            </div>
+            <div class="col-lg pt-2">
+                <h3 class="part-3-h3 pt-4 mt-5">سازمان مردم نهاد و غیرانتفاعی</h3>
+                <h3 class="part-3-h3">حمایت از بیماران سوخته</h3>
+                <fieldset class="part-3-inner-box">
+                    <legend><span><img class="mx-3" src="static/images/green-plus.png" height="35px" alt=""></span>هدف و
+                        چشم انداز ما</legend>
+                    <p>ایفای نقش موثر برای رسیدن به جامعه ای که در آن</p>
+                    <p> احتمال سوختن افراد,نزدیک به صفر باشد;</p>
+                    <p>واگر فردی دچار سوختگی شد احتمال بازگشت کامل او</p>
+                    <p>به روند عادی زندگی نزدیک به صددرصد باشد.</p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <!--========== Video Part ==========-->
+    <div class="container-fluid video-part-back" style="height: auto;">
+        <div class="row">
+            <div class="col-xl">
+                <video src="" width="90%" class="mt-4 mb-5 pb-4" controls poster="/static/images/video-pic.png"></video>
+            </div>
+            <div class="col-xl">
+                <h3>ققنوس کیست و چه می خواهد؟</h3>
+                <!-- <h4>ما از سفیران ققنوس چه می خواهیم؟</h4> -->
+                <p>انجمن مردم-نهاد, غیردولتی و غیرسیاسی حمایت از بیماران سوخته, با کمک نیروهای داوطلب و بدون منافع مالی,
+                    در جهت پیشگیری از سوختگی و نیز حمایت از بیماران سوخته فعالیت می کند...</p>
+                <button class=" video-part-button1"><a href="{% url 'About-page' %}">درباره ققنوس بیشتر بدانید<span><img
+                                class="mr-5" src="static/images/black-plus.png" width="33px"></span></a></button>
+                <br>
+                <button class=" video-part-button2"><a href="">دانلود کتابچه ققنوس<span><img class="mr-5"
+                                style="margin-right: 85px !important;" src="static/images/download-icon-black.png"
+                                width="35px"></span></a></button>
+            </div>
+        </div>
+    </div>
+    <!--========== PlusPlusPlus Part ==========-->
+    <div class="container-fluid">
+        <div class="row plusplusplus">
+            <div class="col-md text-center">
+                <button class="plusplusplus-button mt-5"><a href="">سفیر و حامی ققنوس شوید<span><img
+                                class="mr-5" style="margin-right: 60px !important;"
+                                src="static/images/heart-hand-icon-black.png" width="30px"></span></a></button>
+            </div>
+            <div class="col-md text-center">
+                <img class="text-center" src="/static/images/plusplusplus.png" style="margin-top: -20px;" width="85%"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <!--========== Members ==========-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-xl members-picture">
+                        <img class="w-100 d-block" src="static/images/mohamad.jpeg" alt="">
+                        <h4 class="carousel-caption">محمد بابایی</h4>
+                    </div>
+                    <div class="col-xl pb-4 members-text" style="background-color: #333333;">
+                        <h3>ما چرا با ققنوس کار می کنیم؟</h3>
+                        <img class="quote-up" src="static/images/quote-icon-up.png" alt="">
+                        <p>آشنایی من و ققنوس کاملا اتفاقی بود ، اوایل نمیخواستم عضوی از ققنوس باشم ولی...
+                            یکم صبر واقعا فقط یکم صبر کافی بود که بفهمم ققنوس با همه NGO هایی که میشناختم خیلی فرق داره
+                            ، موندم و ققنوس همیشه یه قسمتی از قلب و ذهنم شد.
+                            مجموعه ای از آدم های فوق العاده و بی نظیر باعث میشه ققنوس همیشه دلپذیر باشه.
+                            در آخر “ققنوس” اسمی که تمام و کمال بازتاب اتفاقی هست که اونجا میافته.</p>
+                        <img class="quote-down" src="static/images/quote-icon-down.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-xl members-picture">
+                        <img class="w-100 d-block" src="static/images/sara.jpeg" alt="">
+                        <h4 class="carousel-caption">سارا آقا بابایی</h4>
+                    </div>
+                    <div class="col-xl pb-5 members-text" style="background-color: #333333;">
+                        <h3>ما چرا با ققنوس کار می کنیم؟</h3>
+                        <img class="quote-up" src="static/images/quote-icon-up.png" alt="">
+                        <p>ققنوس یه خانواده است که هر روز داره بزرگتر میشه و من خوشحال ترینم که کوچیکترین عضوشونم هر وقت
+                            کلی ادم با انگیزه و فرشته خواستید ببینید به ققنوس سر بزنید.</p>
+                        <img class="quote-down" src="static/images/quote-icon-down.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-xl members-picture">
+                        <img class="w-100 d-block" src="/static/images/aysan.jpeg" alt="">
+                        <h4 class="carousel-caption">آیسان عباسی</h4>
+                    </div>
+                    <div class="col-xl pb-5 members-text" style="background-color: #333333;">
+                        <h3>ما چرا با ققنوس کار می کنیم؟</h3>
+                        <img class="quote-up" src="static/images/quote-icon-up.png" alt="">
+                        <p>من سفیر ققنوس هستم تا دیگران هم مثل من، امید را برای ادامه زندگی انتخاب کنند.</p>
+                        <img class="quote-down" src="static/images/quote-icon-down.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-xl members-picture">
+                        <img class="w-100 d-block" src="/static/images/armin.jpeg" alt="">
+                        <h4 class="carousel-caption">آرمین شهرتی</h4>
+                    </div>
+                    <div class="col-xl pb-5 members-text" style="background-color: #333333;">
+                        <h3>ما چرا با ققنوس کار می کنیم؟</h3>
+                        <img class="quote-up" src="static/images/quote-icon-up.png" alt="">
+                        <p>من سفیر ققنوس هستم تا دیگران هم مثل من، امید را برای ادامه زندگی انتخاب کنند.</p>
+                        <img class="quote-down" src="static/images/quote-icon-down.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-xl members-picture">
+                        <img class="w-100 d-block" src="/static/images/elnaz.jpeg" alt="">
+                        <h4 class="carousel-caption">الناز ازنادزاده</h4>
+                    </div>
+                    <div class="col-xl pb-5 members-text" style="background-color: #333333;">
+                        <h3>ما چرا با ققنوس کار می کنیم؟</h3>
+                        <img class="quote-up" src="static/images/quote-icon-up.png" alt="">
+                        <p>براي پروازي دوباره از خاكستر ها شروع مي كنيم ،با ققنوس اميدهايمان را از نو مي سازيم .</p>
+                        <img class="quote-down" src="static/images/quote-icon-down.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-xl members-picture">
+                        <img class="w-100 d-block" src="/static/images/sabaa.jpeg" alt="">
+                        <h4 class="carousel-caption">صبا سعیدی</h4>
+                    </div>
+                    <div class="col-xl pb-5 members-text" style="background-color: #333333;">
+                        <h3>ما چرا با ققنوس کار می کنیم؟</h3>
+                        <img class="quote-up" src="static/images/quote-icon-up.png" alt="">
+                        <p>همراهی با ققنوس، سرشار است از حس خوب انسان بودن
+                            حس خوبِ بودن در کنار کسانی که با تمام دل خود آمده‌اند تا همراه آسیب‌دیدگان سوانح سوختگی باشند
+                            حس خوبِ بودن در کنار کسانی که زندگی دوباره را به گوشه‌نشینی ترجیح داده‌اند
+                            و به قول سهراب:
+                            هر کجا برگی هست، شور من می‌شکفد
+                            مثل یک گلدان، می‌دهم گوش به موسیقی روییدن
+                            </p>
+                        <img class="quote-down" src="static/images/quote-icon-down.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-xl members-picture">
+                        <img class="w-100 d-block" src="/static/images/hamed.jpeg" alt="">
+                        <h4 class="carousel-caption">حامد صادقی</h4>
+                    </div>
+                    <div class="col-xl pb-5 members-text" style="background-color: #333333;">
+                        <h3>ما چرا با ققنوس کار می کنیم؟</h3>
+                        <img class="quote-up" src="static/images/quote-icon-up.png" alt="">
+                        <p>ققنوس پروازگاه آنهایی است که از خاکستر ناامیدی به شعله امید رسیده اند؛ و بی شک ققنوس بی عشق،هیچوقت ققنوس نمیشد....</p>
+                        <img class="quote-down" src="static/images/quote-icon-down.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="members-prev" aria-hidden="true"><img src="static/images/prev-paginate.png" alt=""></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="members-next" aria-hidden="true"><img src="static/images/next-paginate.png" alt=""></span>
+        </a>
+    </div>
+    <!--========== News Part ==========-->
+    <div class="container-fluid">
+        <fieldset class="fieldset-blog">
+            <legend><img class="ml-4" width="35px" src="/static/images/green-plus.png">اخبار سوختگی</legend>
+        </fieldset>
+    </div>
+    <div class="container-fluid">
+        <div class="row home-page-news-cards">
+            {% for new in news %}
+            <div class="col-lg home-page-news mb-4">
+                <a href="{% url 'news-sukhtegi-detail' new.id %}">
+                    <div class="row">
+                        <div class="col-md-5 home-page-news-image">
+                            <img src="{{ new.image.url }}" alt="">
+                        </div>
+                        <div class="col-md home-page-news-text">
+                            <h5>{{ new.title }}</h5>
+                            <p>{{ new.summ }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--========== Blog Part ==========-->
+    <div class="container-fluid">
+        <fieldset class="fieldset-blog" style="margin-top: 0px;">
+            <legend><img class="ml-4" width="35px" src="/static/images/green-plus.png">اخبار انجمن</legend>
+        </fieldset>
+    </div>
+    <div class="container-fluid">
+        <div class="row home-page-blog-cards">
+            {% for post in posts %}
+            <div class="col-lg-4 {% if forloop.counter|divisibleby:2 %}even{% else %}odd{% endif %}">
+                <a href="{% url 'news-anjoman-detail' post.id %}">
+                    <img style="height: 380px; object-fit: cover;" src="{{ post.image.url }}" width="100%">
+                    <h4 class="">{{ post.title }}</h4>
+                    <p class="">{{ post.summ }}.</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--========== Info ==========-->
+    <div class="container-fluid info-back">
+        <div class="row">
+            <div class="col-lg info-text">
+                <h3>به جریان مبارزه با حوادث سوختگی </h3>
+                <h3 class="pb-4">ملحق شوید ...</h3>
+                <p>انجمن حمایت از بیماران سوختگی امیدوار است بتواند برای گام برداشتن در مسیر پیشگیری و کاهش میزان
+                    سوختگی, آموزش عمومی, بهبود درمان و حمایت مادام العمر از بیماران سوخته, از شما کمک و همراهی بگیرد.
+                </p>
+            </div>
+            <div class="col-lg info-form">
+                <p>برای دریافت آخرین اطلاعات مربوط به ایمنی, پیشگیری از سوختگی, برنامه های جمعی انجمن و نحوه کمک, ایمیل
+                    خود را در فرم زیر وارد کنید: </p>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs">
+                                <button name="{{bform.prefix}}" type="submit" class="btn btn-primary info-submit"><img
+                                        class="py-2" width="40px" src="static/images/white-plus.png" alt=""></button>
+                            </div>
+                            <div class="col-xs">
+                                {{bform.email}}
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--========== Gholak ==========-->
+    <div class="container-fluid gholak-back"
+        style=" background-image: url('/static/images/gholak.jpg'); background-size: cover;">
+        <div class="row">
+            <div class="col-lg"> </div>
+            <div class="col-xl-4 col-lg-6 gholak-info text-right">
+                <h3 class="pb-5">قلک ققنوس</h3>
+                <p>برای دریافت قلک ققنوس میتوانید</p>
+                <a href="{% url 'Gholak-page' %}" class="mb-3 btn">آنلاین درخواست قلک کنید</a>
+                <p style="line-height: 0px;" class="pt-4 mt-2 ghm">همچنین می‌توانید با شماره‌ی زیر تماس بگیرید</p>
+                <h6>0098 (21) <span>40 22 78 70</span></h6>
+                <p class="pt-1 pb-1 text-right">یا اطلاعات تماس خود را وارد کنید: </p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{aform.info}}
+                    <button name="{{aform.prefix}}" type="submit" class="info-submit gholak-submit"><img class="py-2"
+                            width="25px" src="static/images/right-arrow-black.png" alt=""></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--========== Sponsers ==========-->
+    <div class="container-fluid sponsers-back">
+        <h3>حامیان انجمن ققنوس</h3>
+        <div class="container">
+            <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
+                <div class="MultiCarousel-inner pb-5 mb-4">
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon1.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon2.jpg" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon3.jpg" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon4.jpg" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon5.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon6.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon7.jpg" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon8.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon9.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon10.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon11.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon12.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon13.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon14.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon15.png" width="140px" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pad15">
+                            <img src="/static/images/icon16.png" width="140px" alt="">
+                        </div>
+                    </div>
+                </div>
+                <a style="background-color: transparent; border: none; outline: none;"
+                    class="btn btn-primary leftLst"><img src="static/images/main-slider-prev-arrow.png" width="25px"
+                        alt=""></a>
+                <a style="background-color:transparent; border: none; outline: none;"
+                    class="btn btn-primary rightLst"><img src="static/images/main-slider-next-arrow.png" width="25px"
+                        alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="icon-slider-main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>حامیان انجمن ققنوس</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="carousel box-carousel d-sm-block main-box-carousel">
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon1.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon2.jpg" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon3.jpg" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon4.jpg" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon5.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon6.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon7.jpg" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon8.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon9.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon10.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon11.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon12.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon13.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon14.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon15.png" alt=""></a>
+                        </div>
+                        <div class="box main-box">
+                            <a href=""><img src="/static/images/icon16.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock content %}

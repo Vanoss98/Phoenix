@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="login-back">
+    <div class="card-group login-btn-main">
+        <a href="">
+            <div class="card" style="border: none;">
+                <div class="card-body login-btn-1 text-center">
+                    <p class="card-text">ورود اعضا</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'register' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body login-btn-2 text-center">
+                    <p class="card-text">عضو ققنوس باشید</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'patient-register' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body login-btn-3 text-center">
+                    <p class="card-text">ثبت نام بیماران</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="container-fluid login-main">
+        <div class="row">
+            <div class="col-lg-7 signup-detail-form text-center">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="username" autofocus="" placeholder="* نام کاربری (انگلیسی)"
+                        autocapitalize="none" autocomplete="username" maxlength="150"
+                        class="textinput textInput form-control6" required="" id="id_username">
+                    <input type="password" class="textinput textInput form-control6" placeholder="* کلمه رمز"
+                        name="password" autocomplete="current-password" required="" id="id_password">
+                    <small><a class="float-right pt-4" href="{% url 'password_reset' %}">رمز خود را فراموش کردید؟</a></small>
+                    <input class="btn help-detail-btn mt-4" type="submit" value="ورود">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock content %}

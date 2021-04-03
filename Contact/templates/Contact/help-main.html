@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="help-section">
+    <div class="container-fluid">
+        <h1 class="mt-5 pt-3 mb-4 help-header"><span><img src="/static/images/green-plus.png" class="ml-4 pl-3" width="60px" alt=""></span>کمک به ققنوس</h1>
+        <div class="container-fluid help-main">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card help-card-main text-center">
+                        <div class="card-body help-card-1">
+                            <img src="/static/images/hbanner-icon.png" width="50px" alt="">
+                            <h4 class="pt-4 mt-2">کمک از طریق</h4>
+                            <h4>بنر‌های مراسم گرامیداشت</h4>
+                            <p class="card-text">می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید. می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید.</p>
+                            <a href="{% url 'Help-form-page' %}" class="btn">ثبت نام برای دریافت بنر</a>  
+                        </div>
+                        <div class="help-1-border"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card help-card-main text-center">
+                        <div class="card-body help-card-2">
+                            <img src="/static/images/hgholak-icon.png" width="79px" alt="">
+                            <h4 class="pt-4 mt-2">کمک از طریق</h4>
+                            <h4>قلک</h4>
+                            <p class="card-text">می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید. می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید.</p>
+                            <a href="{% url 'Gholak-page' %}" class="btn">ثبت نام برای دریافت قلک</a>  
+                        </div>
+                        <div class="help-2-border"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card help-card-main text-center">
+                        <div class="card-body help-card-3">
+                            <img src="/static/images/hphone-icon.png" width="72px" alt="">
+                            <h4 class="pt-4 mt-2">کمک نقدی</h4>
+                            <p class="card-text">می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید. می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید.</p>
+                            <a href="https://zarinp.al/ghoghnoosngo.com" class="btn">پرداخت اینترنتی</a>  
+                        </div>
+                        <div class="help-3-border"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card help-card-main text-center">
+                        <div class="card-body help-card-4">
+                            <img class="my-2 pb-1" src="/static/images/hshare-icon.png" width="70px" alt="">
+                            <h4 class="pt-4 mt-2">کمک برای اطلاع‌رسانی</h4>
+                            <h4>در فضای دیجیتال</h4>
+                            <p class="card-text">می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید. می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید.</p>
+                            <a href="{% url 'Help-form-page' %}" class="btn">ثبت نام برای همراهی آن‌لاین</a>  
+                        </div>
+                        <div class="help-1-border"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card help-card-main text-center">
+                        <div class="card-body help-card-5">
+                            <img src="/static/images/hspecial-icon.png" width="65px" alt="">
+                            <h4 class="pt-4 mt-2">کمک تخصصی</h4>
+                            <h4>(درمان - بازتوانی)</h4>
+                            <p class="card-text">می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید. می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید.</p>
+                            <a href="{% url 'Help-form-page' %}" class="btn">ثبت نام برای کمک تخصصی</a>  
+                        </div>
+                        <div class="help-2-border"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card help-card-main text-center">
+                        <div class="card-body help-card-6">
+                            <img src="/static/images/card-3-icon.png" width="66px" alt="">
+                            <h4 class="pt-4 mt-2">کمک کاری</h4>
+                            <h4>و اجرایی</h4>
+                            <p class="card-text">می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید. می‌توانید با ثبت نام آنلاین برای بنر‌های گرامیداشت, به انجمن ققنوس کمک کنید.</p>
+                            <a href="{% url 'Help-form-page' %}" class="btn">ثبت نام برای کمک کاری</a>  
+                        </div>
+                        <div class="help-3-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock %}

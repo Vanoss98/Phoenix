@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load jformat %}
+{% load custom_numerals %}
+{% load custom_dates %}
+{% block content %}
+<div style="background-color: #f0f0f0;">
+    <div class="container-fluid py-5 blog-det-main">
+        <div class="row post-detail-main">
+            <div class="col-lg-7 py-5 post-detail-text">
+                <h5 class="pb-4">{{ khabar.title | persianize_digits }}</h5>
+                <hr>
+                <small>
+                    {% for tag in object.tags.all %}
+                    {{ tag.name }}
+                    {% endfor %}
+                </small>
+                <small class="float-left">
+                    {{ khabar.published | jformat:"%d %B %Y" | persianize_digits | custom_dates}}
+                </small>
+                <br>
+                <hr>
+                <p>{{ khabar.paragraph1 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:":1" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph2 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"1:2" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph3 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"2:3" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph4 | persianize_digits }}</p>
+                <img class="py-4" style="max-height: 400px; object-fit: cover;" src="{{ khabar.image.url }}"
+                    width="100%" alt="">
+                <p>{{ khabar.paragraph5 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"3:4" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph6 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"4:5" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph7 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"5:6" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph8 | persianize_digits }}</p>
+                <div class="post-detail-important">
+                    <p>{{ khabar.important_part | persianize_digits }}</p>
+                </div>
+                <p>{{ khabar.paragraph9 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"6:7" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph10 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"7:8" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph11 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"8:9" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph12 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"9:10" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph13 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"10:11" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <p>{{ khabar.paragraph14 | persianize_digits }}</p>
+                {% for img in khabar.anjomanimages_set.all|slice:"11:12" %}
+                <img class="py-4" style="min-height: 400px; width: 100%;" src="{{ img.images.url }}" alt="">
+                {% endfor %}
+                <hr class="mb-5" style="background-color: black !important;">
+                <img class="float-left" src="/static/images/creative-commons-icon.png" width="250px" alt="">
+            </div>
+            <div class="col-lg mr-4">
+                <h4 class="post-detail-related-title mr-4">عناوین مرتبط</h4>
+                {% for p in related_items %}
+                <a href="{% url 'news-anjoman-detail' p.id %}">
+                    <div class="post-detail-related-box">
+                        <h5 class="">{{ p.title | persianize_digits }}</h5>
+                        <small class="float-left">
+                            {% for tag in object.tags.all %}
+                            {{ tag.name }}
+                            {% endfor %}
+                        </small>
+                        <br>
+                        <small class="float-left">
+                            {{ p.published|jformat:"%d %B %Y" | persianize_digits | custom_dates}}
+                        </small>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock %}

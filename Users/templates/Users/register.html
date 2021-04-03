@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="login-back">
+    <div class="card-group login-btn-main">
+        <a href="{% url 'login' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body  register-btn-1 text-center">
+                    <p class="card-text px-3">ورود اعضا </p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'register' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body  register-btn-2 text-center">
+                    <p class="card-text">عضو ققنوس باشید</p>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'patient-register' %}">
+            <div class="card" style="border: none;">
+                <div class="card-body   register-btn-3 text-center">
+                    <p class="card-text">ثبت نام بیماران </p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="container-fluid register-main">
+        <div class="register-detail-form text-center">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg register-detail-form-right">
+                            {{form.username}}
+                            {{form.password1}}
+                            {{form.password2}}
+                            {{form.phoneNumber}}
+                            {{form.first_name}}
+                            {{form.last_name}}
+                            <ul id="id_gender" class="form-check-inline register-radio-main">
+                                <li>
+                                    <label style="margin-left: 25px;" class="form-check-label register-radio"
+                                        for="id_gender_1"><input style="margin-left: 7px;" type="radio" name="gender"
+                                            class="form-check-input" value="1" required="" id="id_gender_1">زن</label>
+                                </li>
+                                <li>
+                                    <label class="form-check-label" for="id_gender_0"><input class="form-check-input"
+                                            type="radio" name="gender" value="0" style="margin-left: 7px;" required=""
+                                            id="id_gender_0">مرد</label>
+                                </li>
+                            </ul>
+                            <small class="register-small">علاقه مندید در چه زمینه ای کمک کنید؟</small>
+                            <ul class="register-checkbox-main" id="id_interests">
+                                <div class="row" >
+                                    <li>
+                                        <label for="id_interests_0"><input type="checkbox" class="ml-2" name="interests" value="0" id="id_interests_0">اطلاع رسانی</label>
+                                    </li>
+                                    <li>
+                                        <label for="id_interests_1"><input type="checkbox" class="ml-2" name="interests" value="1" id="id_interests_1">درمان یا بازتوانی</label>
+                                    </li>
+                                    <li>
+                                        <label for="id_interests_2"><input type="checkbox" class="ml-2" name="interests" value="2" id="id_interests_2">برگزاری ها</label>
+                                    </li>
+                                </div>
+                                <div class="row">
+                                    <li><label for="id_interests_3"><input type="checkbox" class="ml-2" name="interests" value="3"
+                                                id="id_interests_3">
+                                            حرفه ای و کاری</label>
+
+                                    </li>
+                                    <li><label for="id_interests_4"><input type="checkbox" class="ml-2" name="interests" value="4"
+                                                id="id_interests_4">
+                                            مالی و اقتصادی</label>
+
+                                    </li>
+                                    <li><label for="id_interests_5"><input type="checkbox" class="ml-2" name="interests" value="5"
+                                                id="id_interests_5">
+                                            غیره...</label>
+
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="col-lg">
+                            {{form.phoneHome}}
+                            {{form.birth}}
+                            {{form.email}}
+                            {{form.city}}
+                            {{form.address}}
+                            <p class="mt-4">{{form.text}}</p>
+                            <input class="btn help-detail-btn mt-3 py-4" style="background-color: #ffb129;"
+                                type="submit" value="ثبت نام">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock content %}

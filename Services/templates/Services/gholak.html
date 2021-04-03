@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if messages %}
+
+{% for message in messages %}
+<div {% if message.tags %} class="alert alert-success {{ message.tags }} text-center" role="alert" {% endif %}>
+    {{ message }}
+</div>
+{% endfor %}
+
+{% endif %}
+<img  class="about-header" src="/static/images/gholak--header.png" alt="">
+<div class="container-fluid gholak-main">
+    <div class="row">
+        <div class="col-lg-7">
+            <h1><span><img src="/static/images/green-plus.png" class="pl-4" width="65px" alt=""></span>قلک ققنوس</h1>
+            <p class="py-4">آتش و ققنوس در هم تنیده‌اند. ققنوس به دل آتش می‌زند تا ققنوسی دیگر بیافریند؛‌ اما آتش در همه حال
+                و در همه جا،‌ خلق نمی‌کند و زایشی در پی ندارد. آتش ویران می‌کند و جان و روح را می‌خلد.
+            </p>
+            <img class="gholak-img" src="/static/images/gholak-img.png" alt="">
+            <p class="py-5">در این میان، آغوش انجمن ققنوس،‌ مأمن آسیب‌دیدگان آتش شده‌است و این آغوش برای بزرگ شدن و امن
+                ماندن، به یاری و همت عالی نیاز دارد. شما دوست عزیز می‌توانید با دریافت قلک انجمن ققنوس‌،‌ به جمع ما
+                بپیوندید. کافی است از ما بخواهید.
+            </p>
+        </div>
+        <div class="col-lg-5">
+            <div class="gholak-form">
+                <h1 class="pt-5">درخواست قلک</h1>
+                <p class="py-4">برای ثبت نام و دریافت قلک, از اطلاعات یا فرم زیر استفاده نمایید.</p>
+                <h4><span><img src="/static/images/wphone-icon.png" width="35px" alt=""></span> 0098 (21) <span>40 22 78
+                        70</span></h4>
+                <h5><span><img class="pr-2" src="/static/images/wmail-icon.png" width="40px" alt=""></span>
+                    gholak@ghoghnoosngo.com</h5>
+                <h1 class="py-5">فرم درخواست قلک</h1>
+                <form method="POST" >
+                    {% csrf_token %}
+                    <p>{{ form.name }}</p>
+                    <p>{{ form.city }}</p>
+                    <p>{{ form.phone }}</p>
+                    <p class="mb-4">{{ form.email }}</p>
+                    <input style="background-color: white; width: 100%; margin-top: 30px;" class="service-darman-button btn" type="submit" value="درخواست قلک">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script src="/static/js/jquery.min2.js" type="text/javascript"></script>
+{% endblock %}
